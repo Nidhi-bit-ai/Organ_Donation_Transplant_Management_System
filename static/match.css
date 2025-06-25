@@ -1,0 +1,13 @@
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  border-radius: 16px;
+}
+
+.btn-success {
+  font-weight: bold;
+  font-size: 1rem;
+}

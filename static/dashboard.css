@@ -1,0 +1,30 @@
+body {
+  background-color: #f5f7fa;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.container .card {
+  border-radius: 12px;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+/* Make all outline buttons hover the same way */
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-secondary:hover {
+  background-color: #0c6f46 !important;
+  color: white !important;
+  border-color: #0c6f46  !important;
+}

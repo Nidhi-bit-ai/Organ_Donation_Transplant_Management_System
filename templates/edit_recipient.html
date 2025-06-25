@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Recipient</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='edit.css') }}">
+</head>
+<body>
+
+  <div class="edit-container">
+    <div class="edit-card">
+      <h2>Edit Recipient Info</h2>
+      <form action="/edit_recipient/{{ recipient.id }}" method="POST">
+        <label>Name</label>
+        <input type="text" name="name" value="{{ recipient.name }}" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" value="{{ recipient.dob }}" required>
+
+        <label>Insurance</label>
+        <input type="text" name="insurance" value="{{ recipient.insurance }}" required>
+
+        <label>History</label>
+        <textarea name="history">{{ recipient.history }}</textarea>
+
+        <label>Street</label>
+        <input type="text" name="street" value="{{ recipient.street }}" required>
+
+        <label>City</label>
+        <input type="text" name="city" value="{{ recipient.city }}" required>
+
+        <label>State</label>
+        <input type="text" name="state" value="{{ recipient.state }}" required>
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

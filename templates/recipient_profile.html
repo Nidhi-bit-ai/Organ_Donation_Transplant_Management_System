@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipient Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+
+  <div class="profile-container">
+    <div class="profile-card">
+      <h2>{{ recipient.name }}</h2>
+      <ul>
+        <li><strong>DOB:</strong> {{ recipient.dob }}</li>
+        <li><strong>Insurance:</strong> {{ recipient.insurance }}</li>
+        <li><strong>Medical History:</strong> {{ recipient.history }}</li>
+        <li><strong>Street:</strong> {{ recipient.street }}</li>
+        <li><strong>City:</strong> {{ recipient.city }}</li>
+        <li><strong>State:</strong> {{ recipient.state }}</li>
+      </ul>
+      <a href="/dashboard" class="back-btn">Back to Dashboard</a>
+    </div>
+  </div>
+
+</body>
+</html>

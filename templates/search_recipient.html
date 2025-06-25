@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Recipient</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+</head>
+<body>
+
+  <div class="search-container">
+    <div class="search-card">
+      <h2>Search Recipient</h2>
+      <form action="/search_recipient" method="POST">
+        <label for="name">Enter Name</label>
+        <input type="text" name="name" placeholder="Recipient name..." required>
+        <button type="submit">Search</button>
+      </form>
+
+      {% if recipient %}
+      <div class="result-box">
+        <p><strong>Found:</strong> {{ recipient.name }}</p>
+        <a class="btn-view" href="/recipient/{{ recipient.id }}">View Profile</a>
+      </div>
+      {% elif message %}
+      <p class="info">{{ message }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+</body>
+</html>

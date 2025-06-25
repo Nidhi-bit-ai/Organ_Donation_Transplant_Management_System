@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Receiver</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='edit.css') }}">
+</head>
+<body>
+
+  <div class="edit-container">
+    <div class="edit-card">
+      <h2>Edit Receiver Info</h2>
+      <form action="/edit_receiver/{{ receiver.id }}" method="POST">
+        <label>Name</label>
+        <input type="text" name="name" value="{{ receiver.name }}" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" value="{{ receiver.dob }}" required>
+
+        <label>Blood Type</label>
+        <input type="text" name="blood" value="{{ receiver.blood }}" required>
+
+        <label>Required Organ</label>
+        <input type="text" name="organ" value="{{ receiver.organ }}" required>
+
+        <label>Severity</label>
+        <input type="text" name="severity" value="{{ receiver.severity }}" required>
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

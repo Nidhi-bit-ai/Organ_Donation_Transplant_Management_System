@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contributor Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+
+  <div class="profile-container">
+    <div class="profile-card">
+      <h2>{{ contributor.name }}</h2>
+      <ul>
+        <li><strong>Date of Birth:</strong> {{ contributor.dob }}</li>
+        <li><strong>Blood Type:</strong> {{ contributor.blood }}</li>
+        <li><strong>Organ to Donate:</strong> {{ contributor.organ }}</li>
+        <li><strong>Phone Number:</strong> {{ contributor.phone }}</li>
+      </ul>
+      <a href="/dashboard" class="back-btn">Back to Dashboard</a>
+    </div>
+  </div>
+
+</body>
+</html>

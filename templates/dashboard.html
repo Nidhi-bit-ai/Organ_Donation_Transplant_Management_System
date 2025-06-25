@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard | Organ Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+    <a class="navbar-brand" href="#">Organ Portal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('register_recipient') }}"><i class="fas fa-user-plus"></i> Add Recipient</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('register_contributor') }}"><i class="fas fa-hand-holding-medical"></i> Add Contributor</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('register_receiver') }}"><i class="fas fa-user-md"></i> Add Receiver</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('search_recipient') }}"><i class="fas fa-random"></i> Match Organs</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('view_recipients') }}"><i class="fas fa-address-book"></i> View Recipients</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('view_contributors') }}"><i class="fas fa-users"></i> View Contributors</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('view_receivers') }}"><i class="fas fa-procedures"></i> View Receivers</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+  <div class="card shadow-sm text-center p-4 mb-5">
+    <h1 class="display-5">Welcome, {{ session.username or "Admin" }} 👋</h1>
+    <p class="lead">Use the menu above to manage the organ transplant system.</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <a href="{{ url_for('register_recipient') }}" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-user-plus me-2"></i> Add Recipient
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="{{ url_for('register_contributor') }}" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-hand-holding-medical me-2"></i> Add Contributor
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="{{ url_for('register_receiver') }}" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-user-md me-2"></i> Add Receiver
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="{{ url_for('search_recipient') }}" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-random me-2"></i> Match Organs
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="{{ url_for('view_recipients') }}" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-address-book me-2"></i> View Recipients
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="{{ url_for('view_contributors') }}" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-users me-2"></i> View Contributors
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="{{ url_for('view_receivers') }}" class="btn btn-outline-success w-100 py-3">
+        <i class="fas fa-procedures me-2"></i> View Receivers
+      </a>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

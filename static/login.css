@@ -1,0 +1,23 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.btn-primary {
+  background-color: #1890a0;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #14788a;
+}
+

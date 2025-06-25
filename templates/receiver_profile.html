@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Receiver Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+
+  <div class="profile-container">
+    <div class="profile-card">
+      <h2>{{ receiver.name }}</h2>
+      <ul>
+        <li><strong>Date of Birth:</strong> {{ receiver.dob }}</li>
+        <li><strong>Blood Type:</strong> {{ receiver.blood }}</li>
+        <li><strong>Required Organ:</strong> {{ receiver.organ }}</li>
+        <li><strong>Condition Severity:</strong> {{ receiver.severity }}</li>
+      </ul>
+      <a href="/dashboard" class="back-btn">Back to Dashboard</a>
+    </div>
+  </div>
+
+</body>
+</html>

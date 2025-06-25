@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register Recipient</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="card shadow-lg">
+      <div class="card-header bg-success text-white">
+        <h3 class="mb-0 text-center"><i class="fas fa-user-plus me-2"></i>Register New Recipient</h3>
+      </div>
+      <div class="card-body">
+        <form action="/register_recipient" method="POST">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label for="Recipient_ID" class="form-label">Recipient ID</label>
+              <input type="number" name="Recipient_ID" class="form-control" required />
+            </div>
+            <div class="col-md-8">
+              <label for="Name" class="form-label">Full Name</label>
+              <input type="text" name="Name" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="Date_of_Birth" class="form-label">Date of Birth</label>
+              <input type="date" name="Date_of_Birth" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="Medical_insurance" class="form-label">Medical Insurance (Policy No.)</label>
+              <input type="number" name="Medical_insurance" class="form-control" />
+            </div>
+            <div class="col-md-12">
+              <label for="Medical_history" class="form-label">Medical History</label>
+              <input type="text" name="Medical_history" class="form-control" placeholder="e.g., diabetes, transplant history" />
+            </div>
+            <div class="col-md-6">
+              <label for="Street" class="form-label">Street</label>
+              <input type="text" name="Street" class="form-control" required />
+            </div>
+            <div class="col-md-3">
+              <label for="City" class="form-label">City</label>
+              <input type="text" name="City" class="form-control" required />
+            </div>
+            <div class="col-md-3">
+              <label for="State" class="form-label">State</label>
+              <input type="text" name="State" class="form-control" required />
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-success px-4">
+              <i class="fas fa-check-circle me-2"></i>Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
