@@ -46,12 +46,5 @@ organ-transplant-system/
 └── README.md
 
 
-![Login Page ](https://github.com/user-attachments/assets/5b15fc3a-f196-4c1d-9666-ad0495db8ef1)
-![Home Page](https://github.com/user-attachments/assets/815f6da9-242a-4896-8a34-78ee677b1e0e)
-![Register New Recipient page](https://github.com/user-attachments/assets/c07584b8-b9e7-4ed4-9264-9d914ec97f18)
-![View Page](https://github.com/user-attachments/assets/2a2fda92-2a64-4b90-a54f-741e2f4620f9)
-
-
-
 
 
